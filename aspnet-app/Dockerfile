@@ -29,6 +29,15 @@ RUN LIBUV_VERSION=1.4.2 \
 	&& apt-get -y clean \
 	&& rm -rf /var/lib/apt/lists/*
 
+RUN mkdir /usr/aspnet
+WORKDIR /usr/aspnet
+RUN git clone https://github.com/dankydoo/ContainerDemo.git
+
+
+
 ENV PATH $PATH:$DNX_USER_HOME/runtimes/default/bin
+WORKDIR /usr/aspnet/ContainerDemo
+RUN dnu restore
+ENTRYPOINT ["dnx", "web"]
 
 EXPOSE 5000
