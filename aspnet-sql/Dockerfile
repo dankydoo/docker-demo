@@ -5,6 +5,7 @@ WORKDIR /usr/aspnet
 RUN git clone https://github.com/dankydoo/ContainerDemo.git
 
 WORKDIR /usr/aspnet/ContainerDemo
+RUN git checkout demo-sqlserver
 RUN dnu restore
 ENTRYPOINT ["dnx", "web"]
 

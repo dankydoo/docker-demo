@@ -1,3 +1,5 @@
+MAINTAINER BOOF
+
 FROM debian:jessie
 
 ENV DNX_VERSION 1.0.0-rc1-update1
