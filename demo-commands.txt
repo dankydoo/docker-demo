@@ -1,0 +1,5 @@
+
+docker-machine create --driver azure --azure-subscription-id "73b741d0-99e5-40e7-b83d-d8a9ee3d3ed8" docker-azure
+
+
+docker run -d -p 4999:4999 -e REGISTRY_STORAGE=azure -e REGISTRY_STORAGE_AZURE_ACCOUNTNAME="csgdockerregistry" -e REGISTRY_STORAGE_AZURE_ACCOUNTKEY="pjqpM9c3F4aqp/ssOTHXD0U5LM1z7fLQ1aP+225JHkcdPboGPWvUvhIBTaMYqDjmwENZMxpM0M2V4ZAGc52Bmw==" -e REGISTRY_STORAGE_AZURE_CONTAINER="registry" --name=registry registry:2
