@@ -1,3 +1,3 @@
 # docker-demo
 
-Deomo for CSG
+Deomo for presentation
