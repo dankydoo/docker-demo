@@ -1,4 +1,4 @@
-FROM kevin:node-base
+FROM hr:demo
 MAINTAINER BOOF
 
 RUN git clone https://github.com/ianmiell/todo.git
